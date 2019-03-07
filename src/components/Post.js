@@ -25,8 +25,8 @@ class Post extends Component{
   }
   render(){
     const post = this.state.post ? (
-      <div className='post'>
-        <h4 className='center'>{this.state.post.title}</h4>
+      <div className='post card'>
+        <h4 className='center card-title'>{this.state.post.title}</h4>
         <p>{this.state.post.body}</p>
       </div>
     ) : (

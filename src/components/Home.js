@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Wolf from '../wolf.png';
 /*
   We will be using this link tag to user the post.id to use it as route parameter
   and then based on the post we want to load our Post Component
@@ -76,6 +77,7 @@ class Home extends Component {
       posts.map( post => {
         return (
           <div className='post card' key={post.id}>
+            <img src={Wolf} alt='This is my car image' />
             <div className='card-content'>
               {/* We will surround the span tag with a {Link to=<dynamic_id to use as route param>}
                   We cant just give to = '/post_id' because it will look literally for /post_id
@@ -92,7 +94,7 @@ class Home extends Component {
 
     return(
       <div>
-        <div className='container center'>
+        <div className='container center home'>
           <h4>Home Page</h4>
           { postList }
         </div>
